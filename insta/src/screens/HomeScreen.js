@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeAreaView } from 'react-native'
-import Stories from '../components/Stories'
+import Stories from '../components/UserStoriesPreview'
 import Feed from '../components/Post/components/Feed'
 
 const HomeScreen = () => (
