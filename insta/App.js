@@ -1,12 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+
+import { NavigationContainer } from '@react-navigation/native';
+
+import Router from './src/router';
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <StatusBar style="auto" />
-      <HomeScreen />
-    </SafeAreaView>
+	<NavigationContainer>
+		<Router />
+	</NavigationContainer>
   );
 }

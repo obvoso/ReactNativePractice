@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
 	likesCount: {
 		fontWeight: 'bold',
 		margin: 3,
-
 	},
 	caption: {
 		margin: 3,
@@ -16,6 +15,16 @@ const styles = StyleSheet.create({
 		color: '#8c8c8c',
 		margin: 3,
 	},
+	icons: {
+		flexDirection: 'row',
+		justifyContent: "space-between",
+		padding: 10,
+	},
+	lefticons: {
+		flexDirection: 'row',
+		width: 100,
+		justifyContent: "space-between",
+	}
 
 })
 
