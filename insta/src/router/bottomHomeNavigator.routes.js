@@ -1,7 +1,7 @@
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeStackScreen from './home.routes'
+import HomeStackNavigator from './home.routes'
 
 import DiscoveryScreen from '../screens/DiscoveryScreen';
 import NotificationScreen from '../screens/NotificationScreen';
@@ -30,8 +30,8 @@ const BottomHomeNavigator = () => (
 			  null
 			],
 		tabBarIcon: ({ focused, color, size }) => {
-		  if (route.name === 'Home') 
-			return <FontAwesome name="home" size={24} color="black" />;
+		//  if (route.name === 'Home') 
+		//	return <FontAwesome name="home" size={24} color="black" />;
 		  if (route.name === 'Discovery') 
 			return <Feather name="search" size={24} color="black" />;
 		  if (route.name === 'Post') 
@@ -43,7 +43,13 @@ const BottomHomeNavigator = () => (
 		},
 	  })}
 	>
-		<Tab.Screen name="Home" component={HomeStackScreen} />
+		{/* 여기도 navigator을 component로 줌 */}
+		<Tab.Screen name="Home" component={HomeStackNavigator} 
+			options={{ //이렇게 쓸 수도 있고 위에처럼 route.name name비교해서 아이콘 return도 가능
+				tabBarIcon: ({ color, size }) => (
+					<FontAwesome name="home" size={24} color="black" /> ),
+			}}
+		/>
 		<Tab.Screen name="Discovery" component={DiscoveryScreen} />
 		<Tab.Screen name="Post" component={CreateScreen} />
 		<Tab.Screen name="Notifications" component={NotificationScreen} />

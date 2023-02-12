@@ -38,9 +38,9 @@ const data = [
 
 const Feed = () => (
 	<FlatList
-	data={data}
-	renderItem={({item}) => <Post post={item} />}
-	ListHeaderComponent={Stories}
+		data={data}
+		renderItem={({item}) => <Post post={item} />}
+		ListHeaderComponent={Stories}
 	/>
 )
 
